@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Cybersecurity</title>
+    <style>
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    background-color: #f4f7f6;
+}
+
+.sidebar {
+    width: 250px;
+    background: linear-gradient(135deg, #1abc9c, #16a085);
+    color: white;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s;
+}
+
+.sidebar:hover {
+    width: 280px;
+}
+
+.sidebar .logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar .logo h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ecf0f1;
+    transition: transform 0.3s;
+}
+
+.sidebar .logo h2:hover {
+    transform: scale(1.1);
+}
+
+.sidebar .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.sidebar .menu li {
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+.sidebar .menu li:hover {
+    transform: translateX(10px);
+}
+
+.sidebar .menu li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    transition: background 0.3s, padding 0.3s;
+}
+
+.sidebar .menu li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    padding-left: 30px;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    width: calc(100% - 250px);
+    transition: margin-left 0.3s, width 0.3s;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #34495e;
+}
+
+header .user-info {
+    display: flex;
+    align-items: center;
+}
+
+header .user-info span {
+    margin-right: 20px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+header .user-info button {
+    padding: 10px 50px;
+    border: none;
+    background: #08e72d;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+header .user-info button:hover {
+    background: #23c546;
+    transform: scale(1.05);
+   
+}
+
+.content {
+    padding: 20px 0;
+    background: white;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content h2 {
+    margin-top: 0;
+    color: #34495e;
+    border-bottom: 2px solid #16a085;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.content p {
+    color: #555;
+    line-height: 1.6;
+}
+
+form button {
+            background-color: #12ce0c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        form button:hover {
+            background-color: #08ee60;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <h2>CyberSecure</h2>
+        </div>
+        <ul class="menu">
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#users">Users</a></li>
+            <li><a href="#settings">Settings</a></li>
+            <li><a href="#reports">Reports</a></li>
+            <li><a href="#logs">Logs</a></li>
+            <li><a href="#support">Support</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <header>
+            <h1>Welcome to the Admin Panel</h1>
+            <div class="user-info">
+                
+                <button>ADMIN</button>
+            </div>
+        </header>
+        <section id="dashboard" class="content">
+            <h2>Dashboard</h2>
+            <p>Overview of system status and metrics.</p>
+        </section>
+        <section id="users" class="content">
+            <h2>Users</h2>
+            <p>Manage user accounts and permissions.</p>
+            <form method="get" action="/admin">
+                <button type="submit">Get Data</button>
+            </form>
+        </section>
+        <section id="settings" class="content">
+            <h2>Settings</h2>
+            <p>Configure system settings and preferences.</p>
+        </section>
+        <section id="reports" class="content">
+            <h2>Reports</h2>
+            <p>View system reports and analytics.</p>
+        </section>
+        <section id="logs" class="content">
+            <h2>Logs</h2>
+            <p>Review system logs and activities.</p>
+        </section>
+        <section id="support" class="content">
+            <h2>Support</h2>
+            <p>Contact support for assistance.</p>
+        </section>
+    </div>
+    <script src="app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const sidebar = document.querySelector('.sidebar');
+    const mainContent = document.querySelector('.main-content');
+
+    sidebar.addEventListener('mouseenter', () => {
+        sidebar.style.width = '280px';
+        mainContent.style.marginLeft = '280px';
+        mainContent.style.width = 'calc(100% - 280px)';
+    });
+
+    sidebar.addEventListener('mouseleave', () => {
+        sidebar.style.width = '250px';
+        mainContent.style.marginLeft = '250px';
+        mainContent.style.width = 'calc(100% - 250px)';
+    });
+});
+
+    </script>
+    
+    <script>
+        const passport = require('passport');
+const LocalStrategy = require('passport-local').Strategy;
+const bcrypt = require('bcryptjs');
+
+const users = require('./users'); // Assuming users is the JSON file or module where user data is stored
+
+passport.use(new LocalStrategy(
+  function(username, password, done) {
+    const user = users.find(user => user.username === username);
+    if (!user) {
+      return done(null, false, { message: 'Incorrect username.' });
+    }
+    bcrypt.compare(password, user.password, (err, res) => {
+      if (res) {
+        return done(null, user);
+      } else {
+        return done(null, false, { message: 'Incorrect password.' });
+      }
+    });
+  }
+));
+
+passport.serializeUser((user, done) => {
+  done(null, user.id);
+});
+
+passport.deserializeUser((id, done) => {
+  const user = users.find(user => user.id === id);
+  done(null, user);
+});
+
+    </script>
+</body>
+</html>
