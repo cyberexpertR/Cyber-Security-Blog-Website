@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Safety </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+     <style>
+      
+      body {
+    font-family: emoji;
+    background-color: rgb(0, 0, 0);
+    color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    line-height: 1.8;
+}
+
+header {
+    background-color: #0a21f5; /* Dark blue */
+    padding: 10px;
+}
+
+header h1 {
+  
+    margin: 0;
+    color: white;
+    
+     text-align:center;
+}
+
+nav ul {
+  background-color: #000000;
+    list-style-type: none;
+    
+    width: 100%;
+    margin: 5px;
+    padding: 0px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 20px;
+}
+
+.footer {
+    background-color: #000003; 
+    padding: 20px;
+    text-align: center;
+}
+/* CSS for Cyber Security Registration Form */
+/* Form container */
+.form-container {
+    width: 400px;
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Form fields */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Submit button */
+.btn-submit {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #45a049;
+}
+
+
+
+
+/* contact container */
+.contact-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #070202;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(240, 235, 235, 0.87);
+    font-family: Georgia, 'Times New Roman', Times, serif; /* Custom font */
+  font-size: 20px;
+  
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow */
+  background-image: linear-gradient(50deg, #0a0414, #f1f1f7); /* Gradient background */
+  
+  
+}
+
+
+
+/* Responsive layout adjustments */
+@media screen and (max-width: 600px) {
+    .form-container {
+        width: 80%;
+    }
+}
+
+
+.dropdown { float: left; } 
+/* Style the dropdown button */ 
+.dropdown .dropbtn { font-size: 16px; border: none; outline: none; color: white; padding: 14px 20px; background-color: inherit; font-family: inherit; margin: 0; } /* Style the dropdown content (hidden by default)*/
+ .dropdown-content { display: none; position: absolute; background-color: #0a22fc; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1; } /* Style the links inside the dropdown */ 
+ .dropdown-content a { float: none; color: white; padding: 12px 16px; text-decoration: none; display: block; text-align: left; } /* Add a dark background to dropdown links on hover */
+  .dropdown-content a:hover { background-color: #ddd; color: black; } /* Show the dropdown content on hover */ 
+  .dropdown:hover .dropdown-content { display: block; }
+
+
+/* Define a CSS animation */
+ @keyframes slideInFromLeft { 0% { transform: translateX(-100%); } 100% { transform: translateX(0); } } /* Apply the animation to an element */
+  .animated-element { animation: slideInFromLeft 1s ease-out; }
+
+img{display: flex; justify-content: center; align-items: center;}
+
+
+.login-button {
+    position: absolute;
+    top: 10px; /* Adjust this value to position it vertically */
+    right: 10px; /* Adjust this value to position it horizontally */
+    /* Add additional styling as needed */
+}
+
+/* Style for the image */
+#top-image {
+    width: 60%; /* Adjust width as needed */
+    height: 60%; /* Maintain aspect ratio */
+    left: 20%; 
+    display: block; /* Ensure it's a block element */
+    position: relative;
+}
+
+/* Additional styling for the container */
+#top-image-container {
+    position: relative;
+    overflow: hidden; /* Hide overflow */
+}
+
+/* Optional overlay for text */
+#overlay {
+    position: absolute;
+    top: 50%; /* Position it vertically in the middle */
+    left: 60%; /* Position it horizontally in the middle */
+    
+    text-align: right;
+    color: white;
+}
+
+/* Styling for the text on the overlay */
+#overlay h1 {
+    font-size: 16px; /* Adjust font size */
+    margin-bottom: 20px;
+    
+}
+
+#overlay p {
+    font-size: 18px; /* Adjust font size */
+    margin-bottom: 20px;
+}
+
+
+.contactimage {
+    
+   
+  display: grid;
+    place-items: center;
+    
+}
+
+.registrationimage
+{
+   
+    display: grid;
+  place-items: center;
+     
+  }
+  .animated-element{
+   
+   display: grid;
+ place-items: center;
+    
+ } 
+ #course-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.course-item {
+    background-color: black;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.course-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.course-description {
+    margin-bottom: 1rem;
+}
+
+.course-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.course-button:hover {
+    background-color: #0056b3;
+}
+
+
+
+#career-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.career-item {
+    background-color:black;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.career-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.career-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.career-description {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.expert-section {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+
+
+.hidden-description {
+            display: none;
+        }
+        .course-item {
+            margin-bottom: 20px;
+        }
+
+        .hidden-description {
+            display: none;
+        }
+        .course-item {
+            margin-bottom: 20px;
+        }
+
+        .title-section {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .highlight {
+            color: rgb(14, 18, 245);
+        }
+
+       
+.image-scroller-footer {
+    padding: 40px 0;
+    text-align: center;
+    background: linear-gradient(to right, #000000, #000000);
+}
+.image-scroller-footer h2 {
+    color: #00f7ff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 5px #23e4e4, 0 0 10px #1511e0, 0 0 15px #0bb0da;
+}
+.image-scroller {
+    overflow: hidden;
+    white-space: nowrap;
+    box-shadow: 0 0 10px #0817dd, 0 0 20px #10c5e6, 0 0 30px #1cc6e4;
+}
+.image-scroller-inner {
+    display: inline-block;
+    animation: scroll 20s linear infinite;
+}
+.image-scroller-inner img {
+    display: inline-block;
+    width: 200px;
+    height: 150px;
+    margin: 0 10px;
+    border: 2px solid #3ee7fd;
+    box-shadow: 0 0 5px #29bdf8;
+    transition: transform 0.3s ease-in-out;
+}
+.image-scroller-inner img:hover {
+    transform: scale(1.1);
+}
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+
+
+
+
+
+#back-to-top-btn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position */
+    bottom: 20px; /* Place the button at the bottom */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #0e0e0e; /* Set a background color */
+    color: #00ff00; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+    box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+}
+
+#back-to-top-btn:hover {
+    background-color: #00ff00; /* Add a green background on hover */
+    color: #0e0e0e; /* Change text color on hover */
+}
+
+  </style>
+</head>
+</head>
+<body>
+  
+   
+        
+  
+    <header>
+        
+<h1>Cyber Security</h1>
+
+<nav>
+  <ul>
+     
+<div class="navbar">   
+<div class="dropdown"> <button class="dropbtn">Topics<i class="fa fa-caret-down"></i> </button>
+<div class="dropdown-content">        
+    
+     
+       <li><a href="#introduction">Introduction</a></li>     
+     <li><a href="#application-security">Application security</a></li>  
+       <li><a href="#network-security">Network security</a></li>
+       
+        <li><a href="#cloud-security">Cloud security</a></li>
+    </div> </div>          
+                  <li><a href="#resources">Resources</a></li>
+                   
+      
+      <li><a href="#contact">Contact us</a></li>
+  </ul>
+  
+</nav>
+           
+    
+</header>
+    
+
+    
+  
+
+    <section id="tips">
+        
+    </section>
+
+    
+      
+    <div class="title-section">
+        <h2>WELCOME TO CYBER SECURITY EDUCATIONAL LEARNING WEBSITE</h2>
+    <P>WE ARE PROVIDE E-NOTES / VIDEOS / COURSES /LIVE CLASSESS</P>
+        <h2 class="text-3xl font-semibold text-gray-800 md:text-4xl dark:text-white">
+            You will learn <span id="dynamic-title" class="highlight"></span>
+        </h2>
+    </div>
+    <div id="top-image-container">
+        <img id="top-image" src="https://redsquid.co.uk/wp-content/plugins/phastpress/phast.php/c2VydmljZT1pbWFnZXMmc3JjPWh0dHBzJTNBJTJGJTJGcmVkc3F1aWQuY28udWslMkZ3cC1jb250ZW50JTJGdXBsb2FkcyUyRjIwMjMlMkYwMyUyRkhvdy1Uby1Qcm9tb3RlLUN5YmVyLVNlY3VyaXR5LUF3YXJlbmVzcy0xLmpwZyZjYWNoZU1hcmtlcj0xNjgwMDk1MjExLTM2NzA0MCZ0b2tlbj00YTY1MjM2ODNlODZiZDA3.q.jpg" alt="Top Image">
+        <div id="overlay">
+         
+        </div>
+    </div>
+    <section id="introduction">
+            <fieldset>  <legend> <h2>Introduction</h2></legend> 
+            <p>
+                Cybersecurity is the practice of protecting internet-connected systems, including hardware, software, and data, from attack, damage, or unauthorized access.
+            </p>
+           
+            <ul>
+                <li>Introduction to Cybersecurity</li>
+                <p>Cyber Security is a crucial process designed to protect networks and devices from external threats. It revolves around the industry standard of confidentiality, integrity, and availability, or CIA. This means that data can be accessed only by authorized parties, information can be added, altered, or removed only by authorized users, and systems, functions, and data must be available on-demand according to agreed-upon parameters.
+
+The main element of Cyber Security is the use of authentication mechanisms. For example, a user name identifies an account that a user wants to access, while a password is a mechanism that proves the user is who he claims to be.
+
+Cybercrime is any unauthorized activity involving a computer, device, or network. The main motive behind cybercrime is to disrupt regular business activity and critical infrastructure, manipulate stolen data to benefit financially, cause financial loss, damage a reputation, achieve military objectives, and propagate religious or political beliefs.
+
+Cyber Security experts employ different tactics to secure computer systems and networks. Some of the best practices include using strong, unique passwords, regularly updating and patching systems, using firewalls and antivirus software, and educating users about potential threats.
+
+Simplilearn offers a comprehensive Advanced Executive Program In Cybersecurity to produce the next generation of Cyber Security experts. These courses all lead to one place: Advanced Executive Program In Cybersecurity, where students will design and develop policies and structures to help businesses enhance their security infrastructure.
+
+Interested in becoming a Cyber Security expert? Enroll in Cybersecurity courses today to take your career to the next level!</p>
+
+
+                <li>Cybersecurity Threats and Attacks</li>
+                <p> Cyber Security threats and attacks are constantly evolving, and it's essential to stay informed about the latest trends and techniques used by cybercriminals.
+                  
+                  Here are some of the most common types of cybersecurity threats and attacks:
+                  <ol>
+                   <li><b> Malware:</b> Malware is a type of software that is designed to disrupt, damage, or gain unauthorized access to a computer system. Malware can take many forms, including viruses, worms, Trojan horses, ransomware, and spyware.
+                  </li>
+                   <li> <b> Phishing: </b> Phishing is a social engineering attack that involves sending fraudulent emails or messages that appear to be from a legitimate source. The goal of phishing is to trick the recipient into providing sensitive information, such as usernames, passwords, or credit card details.
+                  </li>
+                   <li> <b>Denial of Service (DoS) and Distributed Denial of Service (DDoS) attacks: </b>DoS and DDoS attacks are designed to overwhelm a website or network with traffic, making it unavailable to users. These attacks can be launched using a single computer or a network of compromised computers.
+                  </li>
+                <li><b>Man-in-the-middle (MitM) attacks:</b> MitM attacks involve intercepting communication between two parties to steal sensitive information or inject malicious content. These attacks can occur over unsecured Wi-Fi networks or through compromised devices.
+                </li> 
+              <li><b>Password attacks:</b> Password attacks involve attempting to guess or crack a user's password to gain unauthorized access to their account. These attacks can take many forms, including brute force attacks, dictionary attacks, and social engineering attacks.
+              </li>
+            <li><b>SQL injection attacks: </b>SQL injection attacks involve injecting malicious SQL code into a website's database to extract sensitive information or disrupt the website's functionality.
+            </li>
+          <li>   <b> Cross-site scripting (XSS) attacks:</b> XSS attacks involve injecting malicious scripts into a website to steal sensitive information or take control of the user's device.
+          </li>    
+        <li><b>Zero-day exploits: </b>Zero-day exploits involve taking advantage of a previously unknown vulnerability in a software application or operating system. These exploits can be particularly dangerous because they are difficult to detect and defend against.
+        </li>
+          <b>To protect against these threats and attacks, it's essential to stay up-to-date with the latest security best practices, use strong and unique passwords, regularly update and patch software, use firewalls and antivirus software, and educate users about potential threats. Additionally, it's important to have a comprehensive incident response plan in place to quickly and effectively respond to any security incidents that do occur.
+          </b><br><br>
+
+                    </p>
+                  </ul>
+                <h2>Cybersecurity Best Practices</h2>
+                <p>Cybersecurity best practices are essential for protecting computer systems and networks from unauthorized access, use, disclosure, disruption, modification, or destruction. Here are some of the most important cybersecurity best practices:
+<ol>
+                  <li><b> Use strong, unique passwords:</b> Passwords are the first line of defense against unauthorized access to systems and networks. Use strong, unique passwords that are difficult to guess or crack. Consider using a password manager to generate and store complex passwords.
+                   </li>  
+                  <li><b> Regularly update and patch software:</b> Regularly updating and patching software is essential for protecting against known vulnerabilities. Make sure to install updates and patches as soon as they become available.
+                   </li>
+                  <li><b> Use firewalls and antivirus software:</b> Firewalls and antivirus software can help protect against malware, unauthorized access, and other security threats. Make sure to keep these tools up-to-date and configured properly.
+                   </li>
+                     <li><b> Backup data regularly:</b> Regularly backing up data is essential for protecting against data loss due to hardware failure, user error, or malicious attacks. Consider using a cloud-based backup service for added protection.
+                   </li>   
+                  <li><b> Limit access to sensitive information:</b> Limit access to sensitive information to only those who need it. Implement access controls, such as role-based access control (RBAC), to ensure that users only have access to the resources they need to perform their job functions.
+                   </li>  
+                    <li><b> Educate users about security threats:</b> Users are often the weakest link in the security chain. Provide regular training and education to users about security threats, such as phishing, social engineering, and malware.
+                   </li>  
+                   <li><b> Implement multi-factor authentication (MFA):</b> MFA adds an additional layer of security by requiring users to provide two or more forms of authentication, such as a password and a fingerprint or a password and a one-time code.
+                  </li>   
+                  <li><b>  Encrypt sensitive data:</b> Encrypting sensitive data, such as credit card information or personal identifiable information (PII), can help protect against data breaches and unauthorized access.
+                   </li>  
+                   <li><b> Implement a comprehensive incident response plan:</b> A comprehensive incident response plan is essential for quickly and effectively responding to security incidents. The plan should include procedures for detecting, containing, eradicating, and recovering from security incidents.
+                   </li>  
+                   <li><b> Regularly test and audit security controls:</b> Regularly testing and auditing security controls can help ensure that they are working as intended and that any vulnerabilities are identified and addressed.
+                   </li>  
+                   <b> By following these cybersecurity best practices, organizations can significantly reduce their risk of security breaches, data loss, and other security incidents.
+                </b>
+                    </p>
+    </ol>
+            </fieldset>
+        </section>
+        <section id="network-security">
+          <h2 >Network security</h2>
+         <div class="animated-element">
+          <img src="https://www.extnoc.com/learn/wp-content/uploads/2022/02/Network-Security.jpg" width="80%" height="300" >
+            
+        </div> 
+          
+                
+                
+        
+        <section id="application-security">
+          <h2 >Application Security</h2>
+          <div class="animated-element">  <img src="https://www.ssl2buy.com/wp-content/uploads/2022/04/mobile-application-security.jpg" height="300" width="100%" >
+          </div>
+          <p>Application security refers to the measures and practices implemented to protect software applications from security threats throughout their lifecycle. This includes the development, deployment, operation, and maintenance phases. The main goal of application security is to prevent unauthorized access, data breaches, and other malicious activities that could compromise the confidentiality, integrity, and availability of the application and its associated data.
+
+           
+           <li><b> Authentication and Authorization:</b> Ensuring that users are who they claim to be (authentication) and that they have appropriate permissions to access resources within the application (authorization).
+            </li>
+           <li><b> Data Encryption:</b> Protecting sensitive data by encrypting it during transmission and storage to prevent unauthorized access.
+            </li>
+           <li><b> Input Validation:</b> Validating and sanitizing user input to prevent common vulnerabilities such as injection attacks (e.g., SQL injection, XSS).
+            </li>
+           <li><b> Security Testing:</b> Conducting thorough security assessments, including penetration testing, vulnerability scanning, and code reviews, to identify and address potential security weaknesses.
+            </li>
+           <li><b> Secure Coding Practices:</b> Following secure coding guidelines and best practices to minimize vulnerabilities in the application's codebase.
+            </li>
+           <li><b> Security Patching and Updates:</b> Regularly applying security patches and updates to address known vulnerabilities in the application's dependencies and components.
+            </li>
+           <li><b> Secure Configuration:</b> Configuring the application and its underlying infrastructure securely to reduce the risk of exploitation.
+            </li>
+           <li><b> Session Management:</b> Implementing mechanisms to manage user sessions securely, including session timeouts, secure session cookies, and protection against session hijacking.
+            </li>
+           <li><b> Logging and Monitoring:</b> Logging security-relevant events and implementing monitoring solutions to detect and respond to suspicious activities in real-time.
+            </li>
+           <li><b> Secure Deployment:</b> Ensuring that the application is deployed in a secure environment and that proper access controls are in place to protect it from unauthorized access.
+            </li>
+                     
+            
+            
+            
+            </p>
+</section>
+            <section id="cloud-security">
+              <h2>Cloud security</h2>
+              <div class="animated-element"><img src="https://www.eescorporation.com/wp-content/uploads/2021/05/2.jpg" width="50%" height="300">
+            </div>
+           
+              
+                
+                
+                
+                
+                
+            </p>
+
+            </section>
+            <section id="resources">
+             <div class="animated-element"> <img src="https://www.nab.org/cybersecurity/images/coverArt.jpg" alt="" width="100%" height="200" class="responsive"> 
+             </div> 
+               
+                      
+                       
+                        
+             
+                    
+             </section>   
+             <section id="course-list">
+              <!-- Course items will be dynamically added here by JavaScript -->
+          </section>
+        <!-- More sections following the same pattern -->
+
+        
+     <div class="animated-element">   <img src="https://d2ds8yldqp7gxv.cloudfront.net/Blog+Explanatory+Images/Cybersecurity_Career_List-01.webp" alt="" width="70%" height="300">
+     </div>
+ 
+  
+     <section id="career-list">
+      <!-- Career items will be dynamically added here by JavaScript -->
+  </section>
+  <div class="expert-section">
+      <h2>Need Guidance?</h2>
+      <p>Talk to one of our cybersecurity experts to help guide your career path.</p>
+      <p>Fill Registration form Our experts contact soon.</p>
+  </div>
+
+ 
+  
+
+
+<section class="" id="contact">  
+  <div class="form-container" >
+      <h2>Registration form to Enroll courses </h2>
+    <form id="contact-form" action="/submitform" method="post">
+        <div class="form-group">
+           <label for="user">Username:</label>
+            <input type="text" id="user" name="user" autocomplete="off" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="email">Email ID:</label>
+            <input type="text" id="email" name="email" autocomplete="off" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="mobile">Mobile:</label>
+            <input type="text" id="mobile" name="mobile" autocomplete="off" class="form-control">
+        </div>
+        <div class="form-group">  
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments" cols="30" rows="5" class="form-control"></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+  </div>
+</section>
+
+
+
+    
+
+    <section>
+        <h2>Contact Us</h2>
+        <p>If you have any questions or suggestions, feel free to contact us:</p>
+        <form class="contact-container">
+            
+            <p>Phone :- 9001387588</p>
+            <p>Email :- <a href="mailto:rajnandinirajput70@gmail.com">rajnandinirajput70@gmail.com</a></p>
+            <p><address>Benar Rd, Dadi Ka Phatak, Near, Jamna Puri, Jaipur, Rajasthan 302012
+</address></p>
+        </form>
+    </section>
+    <div class="contactimage">
+      <img src="https://cyberintelsys.com/wp-content/uploads/2023/06/Your-paragraph-text-43.png"   width="40%" height="200px" >
+       </div>
+<footer>
+<!-- Image Scroller Footer Section -->
+<button id="back-to-top-btn" title="Go to top">&#8679;</button>
+
+<div class="image-scroller-footer">
+    
+    <div class="image-scroller">
+        <div class="image-scroller-inner">
+            <img src=" https://www.intel.com/content/dam/www/central-libraries/us/en/images/2022-08/adobestock-470737030.jpg" alt="Performance Image 1">
+            <img src="https://pimt.in/wp-content/uploads/2018/03/backtoschoollaptops2_primary-100050487-large-1-1-1.jpg" alt="Performance Image 2">
+            <img src="https://amaxra.com/hubfs/types-of-cyber-security.jpg" alt="Performance Image 3">
+            <img src="https://v2cloud.com/app/uploads/2021/04/Untitled-design-72.png" alt="Performance Image 4">
+            <!-- Repeat images for continuous scrolling effect -->
+            <img src="https://www.fanshawec.ca/sites/default/files/styles/program_medium_943x690_/public/images/2023-05/it_cyber_security_03.23.18_al_009.jpg?h=9994641b&itok=bstinqo7" alt="Performance Image 1">
+            <img src="https://www.shutterstock.com/image-vector/red-hat-white-logo-secret-260nw-2267112823.jpg" alt="Performance Image 2">
+            <img src="https://st4.depositphotos.com/22162388/23954/i/450/depositphotos_239549088-stock-photo-cyber-security-data-protection-information.jpg" alt="Performance Image 3">
+            <img src="https://viterbischool.usc.edu/wp-content/uploads/2021/01/iStock-1194430821_1200x600.jpeg" alt="Performance Image 4">
+            <img src=" https://www.intel.com/content/dam/www/central-libraries/us/en/images/2022-08/adobestock-470737030.jpg" alt="Performance Image 1">
+            <img src="https://pimt.in/wp-content/uploads/2018/03/backtoschoollaptops2_primary-100050487-large-1-1-1.jpg" alt="Performance Image 2">
+            <img src="https://amaxra.com/hubfs/types-of-cyber-security.jpg" alt="Performance Image 3">
+            <img src="https://v2cloud.com/app/uploads/2021/04/Untitled-design-72.png" alt="Performance Image 4">
+            <img src="https://www.fanshawec.ca/sites/default/files/styles/program_medium_943x690_/public/images/2023-05/it_cyber_security_03.23.18_al_009.jpg?h=9994641b&itok=bstinqo7" alt="Performance Image 1">
+            <img src="https://www.shutterstock.com/image-vector/red-hat-white-logo-secret-260nw-2267112823.jpg" alt="Performance Image 2">
+            <img src="https://st4.depositphotos.com/22162388/23954/i/450/depositphotos_239549088-stock-photo-cyber-security-data-protection-information.jpg" alt="Performance Image 3">
+            <img src="https://viterbischool.usc.edu/wp-content/uploads/2021/01/iStock-1194430821_1200x600.jpeg" alt="Performance Image 4">
+            
+        
+        </div>
+    </div>
+</div>
+
+
+    
+        <div class="footer">
+        <p  class="p-3 bg-dark text-white text-center" >&copy; 2024 Cybersecurity. All rights reserved.</p>
+    </div>
+       
+    </footer>
+    <script>
+      
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const courses = [
+            {
+                title: "Introduction to Cybersecurity",
+                description: "Learn the basics of cybersecurity, including fundamental concepts and practices.",
+                hiddenDescription: "This course covers topics such as threat landscapes, security protocols, and defense mechanisms."
+            },
+            {
+                title: "Network Security",
+                description: "Understand the principles of securing network infrastructure and data.",
+                hiddenDescription: "Learn about firewalls, intrusion detection systems, and encryption techniques to protect networked systems."
+            },
+            {
+                title: "Ethical Hacking",
+                description: "Gain practical skills in ethical hacking and penetration testing.",
+                hiddenDescription: "Explore various tools and techniques used by ethical hackers to identify and fix security vulnerabilities."
+            },
+            {
+                title: "Cyber Threat Intelligence",
+                description: "Learn how to identify and analyze cyber threats to protect information systems.",
+                hiddenDescription: "Understand threat actors, their motivations, and how to collect and analyze threat intelligence."
+            },
+            {
+                title: "Digital Forensics",
+                description: "Develop skills in digital forensic investigation and incident response.",
+                hiddenDescription: "Cover methodologies for collecting, preserving, and analyzing digital evidence from cyber incidents."
+            },
+            {
+                title: "Risk Management and Compliance",
+                description: "Understand how to manage cybersecurity risks and ensure compliance with regulations.",
+                hiddenDescription: "Learn about risk assessment frameworks, regulatory requirements, and strategies for risk mitigation."
+            },
+            {
+                title: "Cryptography",
+                description: "Explore the techniques and applications of cryptography in securing data.",
+                hiddenDescription: "Study symmetric and asymmetric encryption, hash functions, and digital signatures."
+            }
+        ];
+
+        const courseList = document.getElementById('course-list');
+
+        courses.forEach((course, index) => {
+            const courseItem = document.createElement('div');
+            courseItem.classList.add('course-item');
+
+            courseItem.innerHTML = `
+                <h2 class="course-title">${course.title}</h2>
+                <p class="course-description">${course.description}</p>
+                <button class="course-button" onclick="toggleDescription(${index})">Learn More</button>
+                <div id="hidden-description-${index}" class="hidden-description">
+                    <p>${course.hiddenDescription}</p>
+                </div>
+            `;
+
+            courseList.appendChild(courseItem);
+        });
+    });
+
+    function toggleDescription(index) {
+        const description = document.getElementById(`hidden-description-${index}`);
+        if (description.style.display === 'none' || description.style.display === '') {
+            description.style.display = 'block';
+        } else {
+            description.style.display = 'none';
+        }
+    }
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const careers = [
+        {
+            title: "Cybersecurity Analyst",
+            description: "Monitor and protect an organization’s network and systems from cyber threats."
+        },
+        {
+            title: "Penetration Tester",
+            description: "Simulate cyber attacks to identify and fix security vulnerabilities in systems."
+        },
+        {
+            title: "Security Consultant",
+            description: "Provide expert advice on how to protect organizations from cyber threats."
+        },
+        {
+            title: "Incident Responder",
+            description: "Manage and respond to security breaches and cyber attacks in real time."
+        },
+        {
+            title: "Security Architect",
+            description: "Design and implement security systems and infrastructure to protect an organization’s data."
+        },
+        {
+            title: "Chief Information Security Officer (CISO)",
+            description: "Oversee an organization’s entire security strategy and team."
+        }
+    ];
+
+    const careerList = document.getElementById('career-list');
+
+    careers.forEach(career => {
+        const careerItem = document.createElement('div');
+        careerItem.classList.add('career-item');
+
+        careerItem.innerHTML = `
+            <h2 class="career-title">${career.title}</h2>
+            <p class="career-description">${career.description}</p>
+        `;
+
+        careerList.appendChild(careerItem);
+    });
+});
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting the default way
+
+    const formData = {
+        user: document.getElementById('user').value,
+        email: document.getElementById('email').value,
+        mobile: document.getElementById('mobile').value,
+        comments: document.getElementById('comments').value,
+    };
+
+    fetch('/submitform', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert('Form submitted successfully! Thanks for contacting us, we will respond soon.');
+        } else {
+            alert('Error submitting form: ' + data.message);
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('An error occurred while submitting the form. Please try again later.');
+    });
+});
+  </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const phrases = [
+            "Cyber Security",
+            "Ethical Hacking",
+            "Network Security",
+            "Digital Forensics",
+            "Cyber Threat Intelligence",
+            "Risk Management and Compliance",
+            "Cryptography"
+        ];
+
+        let currentIndex = 0;
+
+        function updateTitle() {
+            const titleElement = document.getElementById('dynamic-title');
+            titleElement.textContent = phrases[currentIndex] + " |";
+            currentIndex = (currentIndex + 1) % phrases.length;
+        }
+
+        // Initial title update
+        updateTitle();
+
+        // Update the title every 10 seconds
+        setInterval(updateTitle, 10000);
+    });
+
+
+    // Get the button
+let backToTopBtn = document.getElementById("back-to-top-btn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {
+    scrollFunction();
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        backToTopBtn.style.display = "block";
+    } else {
+        backToTopBtn.style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+backToTopBtn.addEventListener("click", function() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+});
+
+</script>
+      
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+
+  
+</body>
+</html>
